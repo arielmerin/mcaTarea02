@@ -13,6 +13,7 @@
 \usepackage{graphicx}
 
 \newcommand{\fp}[1]{#1^{\prime}}
+\newcommand{\de}{\dfrac{d}{dx}}
 
 \begin{document}
 	\begin{titlepage}
@@ -264,21 +265,41 @@ f)$ \lim\limits_{ x \rightarrow 0} \dfrac{x- \sin(x)}{x^{2}} $\\
 
 a) $ f(x) = \dfrac{1}{1+x} $\\
 
-esta es una prueba para \textbf{git}
 
-%Aquí va la respuesta 
+\begin{align*}
+	\fp{f}(x) &= \de \left(\frac{1}{x+1}\right)\\
+	&= - \frac{1}{(x+1)^2}\\
+	f'(f(x))	&= - \frac{1}{(f(x)+1)^2}\\
+	&= - \frac{1}{\left(\dfrac{1}{1+x}+1\right)^2}\\
+	& = - \dfrac{1}{\dfrac{1+x+1}{x+1}}\\
+	& = - \dfrac{1}{\dfrac{x+2}{x+1}}\\
+	& = - \dfrac{x+1}{x+2}\\
+\end{align*}
 
 b) $ f(x) = \sin(x) $\\
 
-%Aquí va la respuesta 
+\begin{align*}
+	f'(x) &= \de (\sin(x))\\
+	&= \cos(x)\\
+	&= \cos(f(x))\\
+	f'(f(x))&= \cos(\sin(x))\\
+\end{align*}
 
 c) $ f(x) = x^{2} $\\
 
-%Aquí va la respuesta 
+\begin{align*}
+	f'(x) &= \de \left( x^2 \right)\\
+	&= 2x\\
+	f'(f(x)) &= 2(f(x))\\
+	&= 2(x^{2})
+\end{align*}
 
 d) $ f(x) = 17 $\\
 
-%Aquí va la respuesta 
+aaaaa dudaaa, en la compisición de funciones pq, según yo no se puede
+\[
+(f \circ g) (x) = f(g(x)) \land D_{f\circ g} = \{ x | x \in Dom_g \land g(x) \in Dom_f \}
+\]
 
 \noindent13. Para cada una de las siguientes funciones, hallar $ f(\fp{f} (x)) $.\\
 
